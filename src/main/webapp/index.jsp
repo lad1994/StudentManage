@@ -11,9 +11,8 @@
 
 <p>作业四：学生信息管理系统</p>
 <form name="show" action="ShowServlet" method="post">
-	<button type="submit">查看信息</button>
+	<button type="submit">读取学生信息</button>
 
-<input type="button" onclick="window.location.href='AddStudent.jsp'" value="新增学生信息">
 </form>
 </body>
 </html>

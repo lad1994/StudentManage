@@ -54,6 +54,8 @@ $(document).ready(function(){
 });
 
 
+
+
 </script>
 </head>
 <body>
@@ -116,7 +118,7 @@ $(document).ready(function(){
   	<td><a href="" id="home">第一页</a></td>
   	<td><a href="" id="last">上一页</a></td>
   	<td><a href="" id="next">下一页</a></td>
-  	<td><a href="" id="end">最后一页</a></td>
+  	<td><a href="" id="next">最后一页</a></td>
   	
   	
   	<td>
