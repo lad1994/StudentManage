@@ -27,7 +27,7 @@ public class StudentRedisService {
 	     */
 	    public void connectRedis() {
 	        jedis=RedisUtil.getJedis();
-	        System.out.println("服务器正在运行"+jedis.ping());
+	        System.out.println("服务器正在运行"+jedis.ping());//显示连接结果
 	    }
 	    
 	    /**
@@ -36,7 +36,7 @@ public class StudentRedisService {
 	   public void DeleteStudent(Student student,String member)
 	   {
 		   jedis=RedisUtil.getJedis();
-		   jedis.zrem("student", member);
+		   jedis.zrem("student", member);//使用zremove方法
 		   
 	   }
 	   

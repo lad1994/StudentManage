@@ -4,7 +4,7 @@ import java.sql.Date;
 
 public class Student {
 
-
+	//student的实体类
 	private String id;
 	private String name;
 	private String birthday;

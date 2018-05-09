@@ -34,7 +34,7 @@ public class AddServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//设置编码
+		//设置页面编码
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
         //获取客户端的数据
@@ -43,7 +43,7 @@ public class AddServlet extends HttpServlet {
 		String birthday =request.getParameter("birthday");					
 		String description = request.getParameter("description");
 		String avgscore1 = request.getParameter("avgscore");
-		//String类型强转为int类型
+		//redis中设置的String类型强转为int类型使用
 		int avgscore = Integer.parseInt(avgscore1);
 		
 		
@@ -58,13 +58,9 @@ public class AddServlet extends HttpServlet {
 		
 		
 		
-		//调用业务类
+		//调用业务类，通过封装的数据，新增学生信息
 		StudentRedisService studentRedisService = new StudentRedisService();
 		studentRedisService.AddStudents(student, Double.parseDouble(id), member);
-		//List<Student> students = studentRedisService.QueryStudent(student);
-		//获取session
-		//HttpSession session = request.getSession();
-		//session.setAttribute("ADD", students);
 		request.getRequestDispatcher("ShowServlet").forward(request, response);
 	}
 

@@ -31,7 +31,7 @@ public class ShowServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//获取参数
+		//获取参数，得到当前页码
 		String strNumber = request.getParameter("pageNumber");
 		//判断当前页码
 		int number = 1;
